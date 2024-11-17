@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live TV Streaming</h1>
+        <input type="text" id="searchBar" placeholder="Search for a channel..." onkeyup="filterChannels()">
+        
+        <video id="videoPlayer" controls autoplay>
+            <!--<source src="https://dmitwlvvll.cdn.mangomolo.com/dubaisportshd/smil:dubaisportshd.smil/chunklist.m3u8" type="application/x-mpegURL">-->
+            Your browser does not support the video tag or the format of this video.
+        </video>
+
+        <div class="channel-list" id="channelList">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwMi9c3LiAW6XtII5d7615c_CV1bDXo-RQA&usqp=CAU" alt="Dubai Sports" onclick="changeChannel('https://dmitwlvvll.cdn.mangomolo.com/dubaisportshd/smil:dubaisportshd.smil/chunklist.m3u8')" data-name="Dubai Sports">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Discovery_Kids_Logo_2021-Presente.webp" alt="Channel 2" onclick="changeChannel('https://dplus.gammacdn.workers.dev/videos/113.m3u8')" data-name="Discovery Kids">
+            <img src="https://via.placeholder.com/150?text=Channel+3" alt="Channel 3" onclick="changeChannel('https://example.com/channel3.m3u8')" data-name="Channel 3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
